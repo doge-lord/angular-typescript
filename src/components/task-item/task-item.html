@@ -1,0 +1,21 @@
+<div task-id="{{ task.id }}" draggable="true" class="task-item task-item-{{ ::(task.id % 5) }}">
+    <div class="remove-button">
+        <button type="button" class="close" aria-label="Close" ng-click="removeTask(task)">
+                        <span aria-hidden="true">&times;</span>
+                </button>
+    </div>
+    <h4 ng-if="!editable.title" ng-dblclick="editTitle()" class="title">
+        <em ng-if="!task.title"><small>Insert Title here</small></em>
+        <span ng-if="task.title">{{ task.title }}</span>
+        <span ng-click="editTitle()" aria-hidden="true" class="task-edit-button"></span>
+    </h4>
+    <input focus="true" ng-if="editable.title" ng-model="task.title" ng-keypress="keypressTitle($event)" ng-blur="confirmTitle()"
+        placeholder="Title" class="title-input form-control"></input>
+    <p ng-if="!editable.description" ng-dblclick="editDescription()">
+        <em ng-if="!task.description" class="description"><small>Insert Description here</small></em>
+        <span ng-if="task.description" class="description">{{ task.description }}</span>
+        <span ng-click="editDescription()" aria-hidden="true" class="task-edit-button"></span>
+    </p>
+    <textarea focus="true" ng-if="editable.description" ng-trim="false" ng-model="task.description" ng-keypress="keypressDescription($event)"
+        ng-blur="confirmDescription()" rows="3" class="description-input form-control"></textarea>
+</div>

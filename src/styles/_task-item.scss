@@ -1,0 +1,41 @@
+$taskItemColors: #5cb85c, #5bc0de, #f0ad4e, #d9534f, #555555 ;
+
+.task-item {
+    @extend .panel;
+
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    min-height: 80px;
+
+    > .title {
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.task-item + .task-item {
+    margin-top: -5px;
+}
+
+.task-item:first-child {
+    margin-top: 10px;
+}
+
+.task-item:last-child {
+    margin-bottom: 10px;
+}
+
+@for $i from 1 through length($taskItemColors) {
+    $color: nth($taskItemColors, $i);
+
+    .task-item:nth-child(#{length($taskItemColors)}n+#{$i}) {
+        border-left-color: $color;
+
+        > .title {
+            color: $color;
+        }
+    }
+}

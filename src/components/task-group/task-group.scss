@@ -1,0 +1,42 @@
+.task-group {
+    @extend .panel;
+
+    min-height: 300px;
+
+    > .header {
+        @extend .panel-heading;
+
+        > .title {
+            @extend .panel-title;
+
+            font-weight: bold;
+        }
+    }
+
+    > .body {
+        @extend .panel-body;
+
+        > .add-task-button {
+            @extend .btn;
+            @extend .btn-default;
+            @extend .btn-lg;
+            @extend .btn-block;
+        }
+    }
+}
+
+.task-group:not[status] {
+    @extend .panel-default;
+}
+
+.task-group[status="NotStarted"] {
+    @extend .panel-danger;
+}
+
+.task-group[status="InProgress"] {
+    @extend .panel-warning;
+}
+
+.task-group[status="Completed"] {
+    @extend .panel-success;
+}

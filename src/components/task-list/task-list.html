@@ -1,0 +1,36 @@
+<div class="task-list container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">You can drag each task to any categories (Not Started, In Progress, Completed)</div>
+                <div class="panel-body">
+                    <div class="btn-group" role="group">
+                        <button type="button" ng-click="vm.saveTasks()" class="task-list-button">
+                            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>
+                            Save
+                        </button>
+                        <button type="button" ng-click="vm.getTasks()" class="task-list-button">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                            Reload
+                        </button>
+                        <button type="button" ng-click="vm.removeAllTasks()" class="task-list-button">
+                            <span class="glyphicon glyphicon-glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            Delete All
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <task-group tasks="vm.tasks" status="NotStarted" task-title="Not Started"></task-group>
+        </div>
+        <div class="col-sm-4">
+            <task-group tasks="vm.tasks" status="InProgress" task-title="In Progress"></task-group>
+        </div>
+        <div class="col-sm-4">
+            <task-group tasks="vm.tasks" status="Completed" task-title="Completed"></task-group>
+        </div>
+    </div>
+</div>

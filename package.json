@@ -1,0 +1,53 @@
+{
+  "name": "angularjs-typescript",
+  "version": "1.0.0",
+  "description": "Sample application using AngularJS and Typescript",
+  "main": "  ",
+  "directories": {
+    "src": "src",
+    "test": "test"
+  },
+  "scripts": {
+    "serve": "lite-server",
+    "watch": "gulp watch",
+    "test": "karma start",
+    "postinstall": "bower install && typings install && gulp build"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "typescript"
+  ],
+  "author": "Doge Lord",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-browserify": "^5.0.5",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-typescript-preprocessor": "^0.2.0",
+    "lite-server": "^2.2.2",
+    "phantomjs-prebuilt": "^2.1.7",
+    "tsify": "^0.16.0",
+    "tslint": "^3.13.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "del": "^2.2.1",
+    "vinyl-paths": "^2.1.0"
+  }
+}

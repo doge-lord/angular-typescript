@@ -1,0 +1,35 @@
+.task-group {
+    @extend .panel;
+
+    min-height: 300px;
+
+    > .header {
+        @extend .panel-heading;
+
+        > .title {
+            @extend .panel-title;
+
+            font-weight: bold;
+        }
+    }
+
+    > .body {
+        @extend .panel-body;
+    }
+}
+
+.task-group:not[status] {
+    @extend .panel-default;
+}
+
+.task-group[status="NotStarted"] {
+    @extend .panel-danger;
+}
+
+.task-group[status="InProgress"] {
+    @extend .panel-info;
+}
+
+.task-group[status="Completed"] {
+    @extend .panel-success;
+}

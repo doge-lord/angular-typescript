@@ -1,0 +1,12 @@
+<div class="task-group">
+    <div class="header">
+        <h4 class="title">{{ ::taskTitle }}</h4>
+    </div>
+    <div class="body">
+        <task-item ng-repeat="task in tasks | taskFilter: filterBy" task="task"></task-item>
+        <button type="button" ng-click="addTask()" class="add-task-button">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            Add Task
+        </button>
+    </div>
+</div>
