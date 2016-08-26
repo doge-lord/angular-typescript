@@ -6,7 +6,7 @@ AngularJS + Typescript Sample Application
 ### Required:
 - NodeJS 
 
-<Work in Progress (Pending Comments)>
+## Work in Progress 
 
 ### Commands:
 "npm install" - Install all dependencies and build output files 
