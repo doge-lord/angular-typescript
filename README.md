@@ -9,10 +9,10 @@ AngularJS + Typescript Sample Application
 ## Work in Progress 
 
 ### Commands:
-"npm install" - Install all dependencies and build output files 
-"npm run watch" - Watch source for any changes and builds immediately
-"npm test" - Run test scripts
-"npm run serve" - Run project on server 
+`npm install` - Install all dependencies and build output files 
+`npm run watch` - Watch source for any changes and builds immediately
+`npm test` - Run test scripts
+`npm run serve` - Run project on server 
 
 ### Optional NPM packages to install globally (use npm install -g)
 - bower
@@ -24,5 +24,5 @@ AngularJS + Typescript Sample Application
 - typings
 
 ### Steps: 
-1. Run "npm install" on the command line for the first time to download dependencies and build application.
-2. Run "npm run serve" to start the web app
+1. Run `npm install` on the command line for the first time to download dependencies and build application.
+2. Run `npm run serve` to start the web app
